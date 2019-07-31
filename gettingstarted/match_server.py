@@ -22,7 +22,7 @@ def hello_world():
     return matches
 
 
-engine = init_engine(os.environ["reflect_db_key"])
+engine = init_engine(os.environ["PROD_DATABASE_URL"])
 therapist_df = get_therapists(("file", "./data/therapists.07.15.csv"))
 priority_of_variables = [
     [("loc_geo",)],
